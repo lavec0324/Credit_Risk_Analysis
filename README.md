@@ -13,33 +13,17 @@ The six difference machine learning models are:
 * Balanced Random Forest Classifier
 * Easy Ensemble AdaBoost Classifier
 
-[](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Tools_v1_00.tsv.gz)
-
-Pyspark was used to analyze the data.
 
 ## Results
 
-How many Vine reviews and non-Vine reviews were there?
-* After the initial filtering for total votes >= 20 and at least a 50% helpful votes to total votes, there were 31,737 reviews.
-* Of those:
-	* 285 were paid vine reviews
-	* 31,452 were non-paid vine reviews
+By combining the results of each of the learning models in the below table you can visualize comparison results:
 
-How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-* From the above filtered lists there were:
-	* 163 were 5 star ratings for paid vine reviews
-	* 14,603 were 5 star ratings for non-paid vine reviews
+![](https://github.com/lavec0324/Credit_Risk_Analysis/blob/main/resources/summary_graph.png)
 
-What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
-* From the above 5 star ratings:
-	* 57.2% were paid reviews
-	* 46.4% were non-paid reviws
+In addition, you can see from the balanced random forest classifier top ten fields that were used in terms of importance:
 
-The code to produce this analysis can be seen here:
+![](https://github.com/lavec0324/Credit_Risk_Analysis/blob/main/resources/top_ten_features.png)
 
-![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code1.PNG)
-![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code2.PNG)
-![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code3.PNG)
 
 ## Summary 
 
