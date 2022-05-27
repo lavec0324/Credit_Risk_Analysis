@@ -27,7 +27,7 @@ In addition, you can see from the balanced random forest classifier top ten fiel
 
 ## Summary 
 
-In summary there were varying degrees of success with model but the Easy Ensemble AdaBoost Classifier consistently provided at least or better results than the five other models. One note to identify is while the accruacy was very high on the high_risk predictions, the precision and F1 scores were very low.  Filtering out high risk loans would be a main imperative of this model and none of these models are able to do that at a high rate. With the current configuration it may not make sense to use these model to predict Credit Risk however these models could potentially be tweaked to limit the fields used in the analysis to more definitive indicators such as DTI and it may produce better results.
+In summary there were varying degrees of success with models but the Easy Ensemble AdaBoost Classifier consistently provided at least or better results than the five other models. One note to identify is while the accruacy was very high on the high_risk predictions, the precision and F1 scores were very low.  Filtering out high risk loans would be a main imperative of this model and none of these models are able to do that at a high rate. With the current configuration it may not make sense to use these model to predict Credit Risk however these models could potentially be tweaked to limit the fields used in the analysis to more definitive indicators such as DTI and it may produce better results.
 
 
 
