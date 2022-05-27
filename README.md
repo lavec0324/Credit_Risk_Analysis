@@ -1,44 +1,50 @@
-# Pewlett-Hackard
-Module 7
+# Credit Risk Analysis
+Module 17
 
 ## Overview of the Analysis
+The purpose of this analysis is to anaylyze a portfolio of loans and based on six different machine learning models determine whether the models can accurately predict whether each loan is a low or high credit risk.
 
-<!--
+The six difference machine learning models are:
 
-Purpose of this project was to analyze several sources of employee data from Pewlett-Hackard and determine as they look toward to succession planning.  We will be looking at the number of retiring employees by their title and see where potential gaps exist and where that may be filled by looking at mentorship opportunities within the company.  This may help the company determine if the voids that are left by retiring employees can be filled by training within the company.
+* Naive Random Oversampling
+* SMOTE Oversampling
+* Cluster Centroid Undersampling
+* SMOTEENN (Combination over and undesampling)
+* Balanced Random Forest Classifier
+* Easy Ensemble AdaBoost Classifier
+
+[](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Tools_v1_00.tsv.gz)
+
+Pyspark was used to analyze the data.
 
 ## Results
 
-From the tables below we can see:
+How many Vine reviews and non-Vine reviews were there?
+* After the initial filtering for total votes >= 20 and at least a 50% helpful votes to total votes, there were 31,737 reviews.
+* Of those:
+	* 285 were paid vine reviews
+	* 31,452 were non-paid vine reviews
 
-* PH has a disproportionate population of senior personnel retiring which includes engineers and staff
-* There is a very small population of managers retiring
-* Overall numbers of mentors is small relative to the retiring staff which would be an issue as even with one person have several mentorees they would still not be able to cover the retiring population
-* That disproportion gets even greater when looking at the senior engineers, where potential mentors are outnumbered by retirees by over 150 to 1
+How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+* From the above filtered lists there were:
+	* 163 were 5 star ratings for paid vine reviews
+	* 14,603 were 5 star ratings for non-paid vine reviews
 
-#### Retirement eligible grouping by title:
+What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+* From the above 5 star ratings:
+	* 57.2% were paid reviews
+	* 46.4% were non-paid reviws
 
-![](https://github.com/lavec0324/Pewlett-Hackard-Analysis/blob/main/Resources/retiring_titles.PNG)
+The code to produce this analysis can be seen here:
 
-#### Mentorship eligible grouping by title:
+![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code1.PNG)
+![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code2.PNG)
+![](https://github.com/lavec0324/Amazon-Vine-Analysis/blob/main/Resources/Code3.PNG)
 
-![](https://github.com/lavec0324/Pewlett-Hackard-Analysis/blob/main/Resources/mentor_eligible.PNG)
+## Summary 
 
-## Summary
-
-Specifically answering two questions asked:
-
-* How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-  * 72,458 roles will need to be filled if all eligible retirees are to be replaced
-* Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-  * No, based on the current criteria, the number of mentors are far overshadowed by the number of retiring employees.
-
-Additional queries could include:
-
-* Count of number of employees in the retirement table to simplify summing up the number of employees eligible for retirement.
-* Increase the date ranges of the mentors to expand the population of mentors.
-* Group by counts on mentors (already included but not originally requested)
-* Could also create queries to see what other roles were performed by employees, not just the current role, to see if mentorship can be expanded where gaps exist.
+The results do seem to support that paid reviews could bias the percentage of overall ratings higher as the paid was almost 11% higher 5 star ratings.  It is possible that since the amount of vine paid reviews were much lower that the results could have also been skewed.  In addition to this analysis it might be good to also pull in 4 star ratings as this would also show top reviews.  It might also be good to determine the average of all results to see if the overall average of results was higher.
 
 
--->
+
+
