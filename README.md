@@ -27,8 +27,7 @@ In addition, you can see from the balanced random forest classifier top ten fiel
 
 ## Summary 
 
-The results do seem to support that paid reviews could bias the percentage of overall ratings higher as the paid was almost 11% higher 5 star ratings.  It is possible that since the amount of vine paid reviews were much lower that the results could have also been skewed.  In addition to this analysis it might be good to also pull in 4 star ratings as this would also show top reviews.  It might also be good to determine the average of all results to see if the overall average of results was higher.
-
+In summary there were varying degrees of success with model but the Easy Ensemble AdaBoost Classifier consistently provided at least or better results than the five other models. One note to identify is while the accruacy was very high on the high_risk predictions, the precision and F1 scores were very low.  Filtering out high risk loans would be a main imperative of this model and none of these models are able to do that at a high rate. With the current configuration it may not make sense to use these model to predict Credit Risk however these models could potentially be tweaked to limit the fields used in the analysis to more definitive indicators such as DTI and it may produce better results.
 
 
 
